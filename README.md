@@ -1,7 +1,7 @@
 pi-MCP4725
 ================
 
-A Python module for the Raspberry Pi to interface with the MCP4725 I²C Digital-to-Analogue Converter.
+A Python module for the Raspberry Pi to interface with the [MCP4725](https://ww1.microchip.com/downloads/en/devicedoc/22039d.pdf) I²C Digital-to-Analogue Converter.
 
 # Installation
 
@@ -67,7 +67,7 @@ dac_value = 4095 * v_out/V_DD	# The value must be between 0 and 4095 (i.e. 12 bi
 MCP4725.write(dac_value)		# Set the DAC output voltage
 ```
 
-### Saving value to EEPROM
+## Saving value to EEPROM
 
 The DAC features an integrated EEPROM so that the requested voltage output persists through power cycles. To write to EEPROM:
 
@@ -75,7 +75,7 @@ The DAC features an integrated EEPROM so that the requested voltage output persi
 MCP4725.write(dac_value, True)
 ```
 
-### Power down mode
+## Power down mode
 
 The MCP4725 also features a power-down mode, which will disable the output voltage and instead connect the output to ground through a pre-set resistance. The available resistances are 1kOhm, 100kOhm and 500kOhm (see datasheet). To power up the device, simple write a voltage to it.
 
