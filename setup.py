@@ -5,7 +5,7 @@ from distutils.core import setup
 
 here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'desc.md'), 'rb', 'utf-8') as f:
-    full_description f.read()
+    full_description = f.read()
 
 
 setup(
@@ -26,7 +26,7 @@ setup(
 	classifiers=[
 		'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
 		'Intended Audience :: Developers',      # Define that your audience are developers
-		'Operating System :: POSIX :: Pi OS',
+		'Operating System :: POSIX :: Linux',
 		'Topic :: Software Development :: Build Tools',
 		'Topic :: System :: Hardware',
 		'License :: OSI Approved :: MIT License',   # Again, pick a license
